@@ -1,0 +1,148 @@
+/* Reset + Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f8fb;
+}
+
+/* ========== Navbar ========== */
+
+/* زر الهامبورجر */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* زرار الهامبورجر */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+
+    /* نخفي اللينكات افتراضي */
+    .links,
+    .login {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 220px;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 10px;
+    }
+
+    /* نعرضها لما نديله class show */
+    .links.show,
+    .login.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* ========== Main Cards ========== */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* يخلي الكروت تنزل تحت بعض */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    flex: 1 1 250px;
+    /* الكارت ياخد مساحة مرنة */
+    max-width: 300px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.card h1 {
+    font-size: 20px;
+}
+
+.card .content {
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+
+.card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+
+    .links,
+    .login {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .links.show,
+    .login.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #about h1 {
+        font-size: 22px;
+    }
+
+    #about p {
+        font-size: 14px;
+    }
+}
